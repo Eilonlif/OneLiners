@@ -34,6 +34,3 @@
 
     # Function call
     l(b, 1)]
-
-# c_mat = lambda y, x, s: [[0 if j != x else 0 if y != i else 1 for j in range(s)] for i in range(s)]
-# print(c_mat(1, 2, 3))
