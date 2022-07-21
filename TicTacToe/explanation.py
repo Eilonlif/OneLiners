@@ -11,23 +11,16 @@
     # Print function
     p := lambda b: [print(l) for l in b],
 
-    # Summing two matrices function, this is for the input
-    sm := lambda a, b: list(map(list, map(lambda i: map(lambda x, y: x + y, a[i], b[i]), range(len(a))))),
-
-    # Creating temporary matrix for the input
-    cm := lambda y, x, s, val: [[0 if j != x else 0 if y != i else val for j in range(s)] for i in range(s)],
-
-    # Taking an input
-    inp := lambda b, val: (x := sm(b, cm(i, j, len(b), val)), p(x)) if 0 <= (
-     i := int(input(f"Enter y cords for {val}: "))) < len(b) and 0 <= (j := int(
-     input(f"Enter x cords for {val}: "))) < len(b) and b[i][j] == 0 else inp(b, val)[0],
+    inp := lambda b, val: ([[b[k][l] + (val if i == k and l == j else 0) for l in range(len(b))] for k in range(len(b))]) if 0 <= (
+        i := int(input(f"Enter y cords for {val}: "))) < len(b) and 0 <= (j := int(
+        input(f"Enter x cords for {val}: "))) < len(b) and b[i][j] == 0 else inp(b, val),
 
     # Check if game is a draw
     dn := lambda b: all(v != 0 for l in b for v in l),
 
     # Single turn
-    g := lambda b, turn: exit() if c(b) or c([[b[j][i] for j in range(len(b))] for i in range(len(b) - 1, -1, -1)]) or dn(
-     b) else inp(b, turn)[0],
+    g := lambda b, turn: exit() if p(b) and (c(b) or c([[b[j][i] for j in range(len(b))] for i in range(len(b) - 1, -1, -1)]) or dn(
+     b)) else inp(b, turn),
 
     # Main loop
     l := lambda b, turn: l(g(b, turn), -turn),
