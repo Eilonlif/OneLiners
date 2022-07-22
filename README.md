@@ -1,5 +1,6 @@
 # OneLiners
-This Prooject is just about cool ~mostly~ useless oneliners
+This Prooject is just about cool ~mostly~ useless oneliners 
+(Written in python 3.10)
 
 List of all the one-liners so far:
 
