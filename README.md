@@ -1,5 +1,5 @@
 # OneLiners
-This Prooject is just about cool ~mpstly~ useless oneliners
+This Prooject is just about cool ~mostly~ useless oneliners
 
 List of all the one-liners so far:
 
