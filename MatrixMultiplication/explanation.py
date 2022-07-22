@@ -1,4 +1,5 @@
-from matrixMultiplication import f
+from matrixMultiplication import f as f1
+from fastMatrixPow import f as f2
 
 
 def matrixMultiplication(m1, m2):
@@ -17,8 +18,21 @@ def matrixMultiplication(m1, m2):
     return m3
 
 
+def fastMatrixPow(m, n):
+    if n == 1:
+        return m
+    x = matrixMultiplication(t := fastMatrixPow(m, n // 2), t)
+    if n % 2:
+        x = matrixMultiplication(x, m)
+    return x
+
+
+
 m1 = [[1, 2], [3, 4]]
 m2 = [[5, 6], [7, 8]]
 
 print(matrixMultiplication(m1, m2))
-print(f(m1, m2))
+print(f1(m1, m2))
+
+print(fastMatrixPow(m1, 10))
+print(f2(m1, 10))

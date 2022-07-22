@@ -1,4 +1,5 @@
-from fibonacci import f
+from fibonacci import f as f1
+from fastFibonacci import f as f2
 
 
 def fibonacci(n):
@@ -14,5 +15,8 @@ def fibonacci(n):
     return n
 
 
-print(fibonacci(5))
-print(f(5))
+print(fibonacci(10))
+print(f1(10))
+
+# The fast fibonacci is implemented using matrix multiplication cause why not
+print(f2(10))
