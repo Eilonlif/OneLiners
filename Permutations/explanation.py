@@ -13,5 +13,5 @@ def permutations(s: str):
     return perms
 
 
-print(permutations('abc'))
-print(f('abc'))
+print(permutations('123456789'))
+# print(f('abc'))
