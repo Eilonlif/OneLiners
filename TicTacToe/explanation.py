@@ -9,7 +9,8 @@
     c := lambda b: any(abs(sum(l)) == n for l in b) or abs(sum(b[i][i] for i in range(n))) == n,
 
     # Print function
-    p := lambda b: [print(l) for l in b],
+    # Swap 1 for X, -1 for O, 0 for space
+    p := lambda b: [print([{x==1: "X", x==-1: "O"}.get(True, " ") for x in l]) for l in b],
 
     inp := lambda b, val: (
         [[b[k][l] + (val if i == k and l == j else 0) for l in range(n)] for k in range(n)]) if 0 <= (
