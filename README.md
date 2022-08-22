@@ -12,7 +12,7 @@ List of all the one-liners so far:
     * Fast Matrix power raise
 *  [x] Permutations
 *  [x] Tictactoe
-    * extreme code golf tictactoe (318 characters!)
+    * extreme code golf tictactoe (297 characters!)
 *  [x] Fast Power raise
 *  [x] Multiply elements in array
 *  [ ] ...
